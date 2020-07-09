@@ -15,8 +15,8 @@ import numpy as np
 from nltk.tokenize import word_tokenize
 from tqdm import tqdm as progressbar
 
-from tools import support
-
+#from tools import support
+import support
 
 FLAGS = flags.FLAGS
 flags.DEFINE_spaceseplist(
