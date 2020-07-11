@@ -1,8 +1,8 @@
 #!/bin/bash
 
 GPU_ID=0
-#DOMAIN="furniture"
-DOMAIN="fashion"
+DOMAIN="furniture"
+#DOMAIN="fashion"
 ROOT="../data/simmc_${DOMAIN}/"
 
 
