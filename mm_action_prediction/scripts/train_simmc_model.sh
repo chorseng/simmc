@@ -1,8 +1,8 @@
 #!/bin/bash
 
 GPU_ID=0
-DOMAIN="furniture"
-#DOMAIN="fashion"
+#DOMAIN="furniture"
+DOMAIN="fashion"
 ROOT="../data/simmc_${DOMAIN}/"
 
 
@@ -49,7 +49,7 @@ python -u train_simmc_agent.py $COMMON_FLAGS \
 
 
 # Evaluate a trained model checkpoint.
-# CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
-# python -u eval_simmc_agent.py \
-#     --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
-#     --checkpoint="$CHECKPOINT_PATH" --gpu_id=0 --batch_size=50
+CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
+python -u eval_simmc_agent.py \
+    --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
+    --checkpoint="$CHECKPOINT_PATH" --gpu_id=0 --batch_size=50
