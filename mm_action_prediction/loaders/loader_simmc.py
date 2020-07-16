@@ -25,7 +25,6 @@ class DataloaderSIMMC(loaders.LoaderParent):
 
     def __init__(self, params):
         self.params = params
-        print(self.params)
         # Load the dataset.
         raw_data = np.load(params["data_read_path"], allow_pickle=True)
         self.raw_data = raw_data[()]
