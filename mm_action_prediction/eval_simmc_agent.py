@@ -31,7 +31,7 @@ def main(args):
         "single_pass": True,
         "shuffle": False,
         "data_read_path": args["eval_data_path"],
-        "get_retrieval_candidates": True
+        "get_retrieval_candidates": True,
         "domain": "fashion"
     }
     dataloader_args.update(saved_args)
