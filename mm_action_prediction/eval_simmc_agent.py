@@ -34,6 +34,7 @@ def main(args):
         "get_retrieval_candidates": True
     }
     dataloader_args.update(saved_args)
+    print(data_loader_args)
     val_loader = loaders.DataloaderSIMMC(dataloader_args)
     saved_args.update(val_loader.get_data_related_arguments())
 
