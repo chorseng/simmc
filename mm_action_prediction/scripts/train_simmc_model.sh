@@ -1,8 +1,8 @@
 #!/bin/bash
 
 GPU_ID=2
-#DOMAIN="furniture"
-DOMAIN="fashion"
+DOMAIN="furniture"
+#DOMAIN="fashion"
 ROOT="../data/simmc_${DOMAIN}/"
 
 
@@ -55,4 +55,4 @@ COMMON_FLAGS="
 CHECKPOINT_PATH="checkpoints/epoch_20.tar"
 python -u eval_simmc_agent.py  \
     --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
-    --checkpoint="$CHECKPOINT_PATH" --gpu_id=0 --batch_size=50 --domain=${DOMAIN}
+    --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
