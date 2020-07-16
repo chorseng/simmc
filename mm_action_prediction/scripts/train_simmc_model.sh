@@ -53,6 +53,6 @@ COMMON_FLAGS="
 # Evaluate a trained model checkpoint.
 #CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
 CHECKPOINT_PATH="checkpoints/epoch_20.tar"
-python -u eval_simmc_agent.py \
+python -u eval_simmc_agent.py $COMMON_FLAGS \
     --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
-    --checkpoint="$CHECKPOINT_PATH" --gpu_id=0 --batch_size=50 --domain='fashion'
+    --checkpoint="$CHECKPOINT_PATH" --gpu_id=0 --batch_size=50 #--domain=${DOMAIN}
