@@ -36,10 +36,11 @@ COMMON_FLAGS="
     --learning_rate=0.0001 --gpu_id=$GPU_ID --use_action_attention \
     --num_epochs=100 --eval_every_epoch=5 --batch_size=20 \
     --save_every_epoch=5 --word_embed_size=256 --num_layers=2 \
-    --hidden_size=512 \
+    --hidden_size=256 \ 
     --use_multimodal_state --use_action_output --use_bahdanau_attention \
     --skip_bleu_evaluation --domain=${DOMAIN}"
 
+#Default hidden size for above is 512 please take note
 
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
