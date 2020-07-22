@@ -45,7 +45,7 @@ COMMON_FLAGS="
 # For other models, please look at scripts/train_all_simmc_models.sh
 python -u train_simmc_agent.py $COMMON_FLAGS \
     --encoder="history_agnostic" \
-    --text_encoder="transfer"
+    --text_encoder="transformer"
  
     
 ## UNCOMMENT WHEN EVALUATING
