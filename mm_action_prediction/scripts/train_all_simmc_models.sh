@@ -1,5 +1,5 @@
 #!/bin/bash
-GPU_ID=0
+GPU_ID=2
 # DOMAIN="furniture"
 DOMAIN="fashion"
 ROOT="../data/simmc_${DOMAIN}/"
