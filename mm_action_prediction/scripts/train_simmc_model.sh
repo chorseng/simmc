@@ -40,7 +40,6 @@ COMMON_FLAGS="
     --use_multimodal_state --use_action_output --use_bahdanau_attention \
     --skip_bleu_evaluation --domain=${DOMAIN}"
 
-#Default hidden size for above is 512 please take note
 
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
