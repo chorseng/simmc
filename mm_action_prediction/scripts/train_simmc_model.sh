@@ -44,9 +44,10 @@ COMMON_FLAGS="
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
 python -u train_simmc_agent.py $COMMON_FLAGS \
-    #--encoder="history_agnostic" \
-    --encoder = 'tf-idf' \
+    --encoder="tf-idf" \
     --text_encoder="lstm"
+    #--encoder="history_agnostic" \
+    
 
 
 ## UNCOMMENT WHEN EVALUATING
