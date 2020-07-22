@@ -36,23 +36,23 @@ COMMON_FLAGS="
     --learning_rate=0.0001 --gpu_id=$GPU_ID --use_action_attention \
     --num_epochs=100 --eval_every_epoch=5 --batch_size=20 \
     --save_every_epoch=5 --word_embed_size=256 --num_layers=2 \
-    --hidden_size=256 \
+    --hidden_size=512 \
     --use_multimodal_state --use_action_output --use_bahdanau_attention \
     --skip_bleu_evaluation --domain=${DOMAIN}"
 
 
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
-#python -u train_simmc_agent.py $COMMON_FLAGS \
-#    --encoder="history_agnostic" \
-#    --text_encoder="transformer"
+python -u train_simmc_agent.py $COMMON_FLAGS \
+    --encoder="hierarchical_recurrent" \
+    --text_encoder="lstm"
  
     
 ## UNCOMMENT WHEN EVALUATING
 
 # Evaluate a trained model checkpoint.
 #CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
-CHECKPOINT_PATH="checkpoints/epoch_90.tar"
-python -u eval_simmc_agent.py  \
-    --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
-    --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
+#CHECKPOINT_PATH="checkpoints/epoch_90.tar"
+#python -u eval_simmc_agent.py  \
+#    --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
+#    --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
