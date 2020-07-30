@@ -76,7 +76,7 @@ for iter_ind, batch in enumerate(train_loader.get_batch()):
     if iter_ind % 50 == 0:
         cur_time = time.strftime("%a %d%b%y %X", time.gmtime())
         print_str = (
-            "[{}][Ep: {:.2f}][It: {:d}][A: {:.2f}][Aa: {:.2f}]" "[L: {:.2f}][T: {:.2f}]"
+            "[{}][Episode: {:.2f}][Iteration: {:d}][Action: {:.2f}][Action attribute: {:.2f}]" "[Token: {:.2f}][Total: {:.2f}]"
         )
         print_args = (
             cur_time,
