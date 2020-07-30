@@ -28,6 +28,7 @@ MODEL_METAINFO="models/${DOMAIN}_model_metainfo.json"
 
 
 COMMON_FLAGS="
+    --train_task = 2 \
     --train_data_path=${TRAIN_JSON_FILE/.json/_mm_inputs.npy} \
     --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
     --asset_embed_path=${METADATA_EMBEDS} \
@@ -44,7 +45,7 @@ COMMON_FLAGS="
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
 python -u train_simmc_agent.py $COMMON_FLAGS \
-    --encoder="pretrained_transformer" \
+    --encoder="history_agnostic" \
     --text_encoder="lstm"
  
     
