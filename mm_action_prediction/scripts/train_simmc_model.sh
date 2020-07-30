@@ -28,7 +28,6 @@ MODEL_METAINFO="models/${DOMAIN}_model_metainfo.json"
 
 
 COMMON_FLAGS="
-    --train_task = 2 \
     --train_data_path=${TRAIN_JSON_FILE/.json/_mm_inputs.npy} \
     --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
     --asset_embed_path=${METADATA_EMBEDS} \
