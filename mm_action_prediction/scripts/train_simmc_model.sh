@@ -38,7 +38,8 @@ COMMON_FLAGS="
     --save_every_epoch=5 --word_embed_size=256 --num_layers=2 \
     --hidden_size=512 \
     --use_multimodal_state --use_action_output --use_bahdanau_attention \
-    --skip_bleu_evaluation --domain=${DOMAIN}"
+    --domain=${DOMAIN}"
+    #--skip_bleu_evaluation 
 
 
 # Train history-agnostic model.
