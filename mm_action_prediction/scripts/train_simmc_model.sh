@@ -48,6 +48,7 @@ python -u train_simmc_agent.py $COMMON_FLAGS \
     --encoder="history_agnostic" \
     --text_encoder="lstm"
  
+ # Encoder choices are ["history_agnostic", "history_aware", "pretrained_transformer", "hierarchical_recurrent", "memory_network", "tf_idf"]
     
 ## UNCOMMENT WHEN EVALUATING
 
