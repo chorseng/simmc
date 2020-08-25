@@ -48,7 +48,7 @@ python -u train_simmc_agent.py $COMMON_FLAGS \
     --encoder="memory_network" \
     --text_encoder="lstm"
  
- # Encoder choices are ["history_agnostic", "history_aware", "pretrained_transformer", "hierarchical_recurrent", "memory_network", "tf_idf"]
+ # Encoder choices are ["history_agnostic", "history_aware", "pretrained_transformer", "hierarchical_recurrent", "memory_network", "tf_idf"] but history_aware does not exist!
     
 ## UNCOMMENT WHEN EVALUATING
 
