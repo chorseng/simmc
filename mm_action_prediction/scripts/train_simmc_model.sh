@@ -56,7 +56,7 @@ COMMON_FLAGS="
 #CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
 CHECKPOINT_PATH="checkpoints/epoch_25.tar"
 python -u eval_simmc_agent.py  \
-    --eval_data_path=${DEV_JSON_FILE/.json/_mm_inputs.npy} \
+    --eval_data_path=${DEVTEST_JSON_FILE/.json/_mm_inputs.npy} \
     --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
 
 
