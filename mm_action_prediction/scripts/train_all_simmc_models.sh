@@ -15,7 +15,7 @@ VOCAB_FILE="${ROOT}${DOMAIN}_vocabulary.json"
 METADATA_EMBEDS="${ROOT}${DOMAIN}_asset_embeds.npy"
 ATTR_VOCAB_FILE="${ROOT}${DOMAIN}_attribute_vocabulary.json"
 MODEL_METAINFO="models/${DOMAIN}_model_metainfo.json"
-CHECKPOINT_PATH="checkpoints/"
+CHECKPOINT_PATH="checkpoints"
 LOG_PATH="logs/"
 
 
