@@ -44,9 +44,9 @@ COMMON_FLAGS="
 
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
-#python -u train_simmc_agent.py $COMMON_FLAGS \
-#    --encoder="history_agnostic" \
-#    --text_encoder="lstm"
+python -u train_simmc_agent.py $COMMON_FLAGS \
+    --encoder="history_aware" \
+    --text_encoder="lstm"
  
  # Encoder choices are ["history_agnostic", "history_aware", "pretrained_transformer", "hierarchical_recurrent", "memory_network", "tf_idf"]
     
@@ -54,10 +54,10 @@ COMMON_FLAGS="
 
 # Evaluate a trained model checkpoint.
 #CHECKPOINT_PATH="checkpoints/hae/epoch_20.tar"
-CHECKPOINT_PATH="checkpoints/epoch_25.tar"
-python -u eval_simmc_agent.py  \
-    --eval_data_path=${DEVTEST_JSON_FILE/.json/_mm_inputs.npy} \
-    --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
+#CHECKPOINT_PATH="checkpoints/epoch_25.tar"
+#python -u eval_simmc_agent.py  \
+#    --eval_data_path=${DEVTEST_JSON_FILE/.json/_mm_inputs.npy} \
+#    --checkpoint="$CHECKPOINT_PATH" --gpu_id=${GPU_ID} --batch_size=50 --domain=${DOMAIN}
 
 
 # FB added these but I don't think I need
