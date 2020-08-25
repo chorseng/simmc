@@ -45,7 +45,7 @@ COMMON_FLAGS="
 # Train history-agnostic model.
 # For other models, please look at scripts/train_all_simmc_models.sh
 python -u train_simmc_agent.py $COMMON_FLAGS \
-    --encoder="history_aware" \
+    --encoder="memory_network" \
     --text_encoder="lstm"
  
  # Encoder choices are ["history_agnostic", "history_aware", "pretrained_transformer", "hierarchical_recurrent", "memory_network", "tf_idf"]
