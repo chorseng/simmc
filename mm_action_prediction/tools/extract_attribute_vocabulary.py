@@ -11,7 +11,7 @@ import argparse
 import numpy as np
 
 
-# Furniture.
+# Furniture. 
 EXCLUDE_KEYS_FURNITURE = [
     "minPrice",
     "maxPrice",
@@ -21,7 +21,7 @@ EXCLUDE_KEYS_FURNITURE = [
     "intendedRoom",
     "raw_matches",
 ]
-# Furniture
+# Furniture # Should be fashion
 EXCLUDE_KEYS_FASHION = ["focus", "memory"]
 INCLUDE_ATTRIBUTES_FASHION = [
     "availableSizes", "price", "brand", "customerRating", "info", "color"
